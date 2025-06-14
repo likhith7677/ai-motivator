@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI Motivator - Menu</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body class="menu-page">
+    <div class="container">
+       
+        <h1>Select Your Mood</h1>
+        <div class="mood-buttons">
+            <a href="{{ url_for('mood_page', mood='happy') }}" class="mood-button happy">😊 Happy</a>
+            <a href="{{ url_for('mood_page', mood='sad') }}" class="mood-button sad">😔 Sad</a>
+            <a href="{{ url_for('mood_page', mood='bored') }}" class="mood-button bored">😴 Bored</a>
+            <a href="{{ url_for('mixed') }}" class="mood-button mixed">🎭 Mixed</a>
+        </div>
+    </div>
+    <a href="{{ url_for('entry_page') }}" class="back-button">⬅ Back</a>
+</body>
+</html>

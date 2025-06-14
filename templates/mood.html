@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI Motivator - {{ mood.capitalize() }} Mood</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body class="mood-page">
+    <div class="container">
+        
+        <h1>{{ mood.capitalize() }} Mood</h1>
+
+        <!-- Movie Recommendations -->
+        <section class="section-box">
+            <h2>Movie Recommendations (With OTT)</h2>
+            <ul class="list-block">
+                {% for lang, (movie, ott) in movies.items() %}
+                    <li><strong>{{ lang }}:</strong> {{ movie }} <em>(on {{ ott }})</em></li>
+                {% endfor %}
+            </ul>
+        </section>
+
+        <!-- Music Playlists -->
+        <section class="section-box">
+            <h2>Music Playlists</h2>
+            <div class="playlist-buttons">
+                {% for lang, link in playlists.items() %}
+                    <a href="{{ link }}" target="_blank" class="playlist-button">{{ lang }}</a>
+                {% endfor %}
+            </div>
+        </section>
+
+        <!-- Games Section -->
+        <section class="section-box">
+            <h2>Fun Games</h2>
+            <div class="game-links">
+                {% for game, link in games.items() %}
+                    <a href="{{ link }}" target="_blank" class="game-button">{{ game }}</a>
+                {% endfor %}
+            </div>
+        </section>
+
+        <!-- Short Stories Playlist -->
+        <section class="section-box">
+            <h2>Short Stories</h2>
+            <a href="{{ short_stories }}" target="_blank" class="story-button">Watch Short Stories Playlist</a>
+        </section>
+
+        <!-- OTT Platform Buttons -->
+        <footer class="ott-footer">
+            <a href="https://www.youtube.com" target="_blank" class="ott-button youtube"></a>
+            <a href="https://www.netflix.com" target="_blank" class="ott-button netflix"></a>
+            <a href="https://www.hotstar.com" target="_blank" class="ott-button jiocinema"></a>
+            <a href="https://www.primevideo.com" target="_blank" class="ott-button prime"></a>
+            <a href="https://www.instagram.com" target="_blank" class="ott-button instagram" title="Instagram"></a>
+        </footer>
+    </div>
+    <a href="{{ url_for('menu') }}" class="back-button">⬅ Back</a>
+</body>
+</html>

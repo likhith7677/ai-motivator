@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI Motivator - Mixed Mood</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body class="mixed-page">
+    <div class="container">
+        
+        <h1 class="typewriter">Mixed Mood - Choose One</h1>
+        <div style="text-align: center;">
+      <p><strong>Feeling all over the place? Don't worry, even AI has mood swings. Pick one below!</strong></p>
+      </div>
+        <div class="mood-buttons">
+            <a href="{{ url_for('mixed_mood_page', mixed_mood='happy') }}" class="mood-button happy">😊 Happy - Brings more joy!</a>
+            <a href="{{ url_for('mixed_mood_page', mixed_mood='sad') }}" class="mood-button sad">😔 Sad - Uplift your spirits</a>
+            <a href="{{ url_for('mixed_mood_page', mixed_mood='bored') }}" class="mood-button bored">😴 Bored - Fun & games ahead</a>
+        </div>
+    </div>
+    <a href="{{ url_for('menu') }}" class="back-button">⬅ Back</a>
+</body>
+</html>

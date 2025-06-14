@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Motivator - Entry</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="entry-page">
+    <div class="container">
+        <h1>Welcome to MY WORLD</h1>
+        <h2>Bored? Me Too! 🤖 (An AI that admits it and fixes it!)</h2>
+
+        <!-- College Details -->
+        <div class="college-details center-text">
+            <h3>Nagarjuna College of Engineering and Technology</h3>
+            <p>Department of CSE - Artificial Intelligence and Machine Learning</p>
+        </div>
+
+        <!-- Profiles and Logo -->
+        <div class="profiles-container">
+            <!-- Student Details (Left Side) -->
+            <div class="students profile-column">
+                <h3>Developed By:</h3>
+                <div class="profile">
+                    <img class="circle-img" src="{{ url_for('static', filename='likhithhh.jpg') }}" alt="Student 1">
+                    <p>G. Likhith</p>
+                </div>
+                <div class="profile">
+                    <img class="circle-img" src="{{ url_for('static', filename='vishnu.jpg') }}" alt="Student 2">
+                    <p>S. Vishnu</p>
+                </div>
+            </div>
+
+            <!-- Project Logo (Center) -->
+            <div class="logo profile-column center-logo">
+                <img class="circle-img" src="{{ url_for('static', filename='ai logo.jpg') }}" alt="Project Logo">
+                <p><strong>Project Logo</strong></p>
+            </div>
+
+            <!-- Teacher Details (Right Side) 
+            <div class="teacher profile-column">
+                <h3>Under the Guidance of:</h3>
+                <div class="profile">
+                    <img class="circle-img" src="{{ url_for('static', filename='likhithhh.jpg') }}" alt="Faculty">
+                    <p>Prathibha Mam</p>
+                </div>
+            </div>
+        </div>
+        -->
+
+        <!-- Start Button Centered at Bottom -->
+        <div class="start-button-container">
+            <a href="{{ url_for('menu') }}" class="start-button">Start</a>
+        </div>
+    </div>
+</body>
+</html>
