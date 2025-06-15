@@ -138,7 +138,7 @@ playlists = {
 }
 
 # Short stories YouTube playlist (common for all moods)
-short_stories_playlist = "https://www.youtube.com/playlist?list=PLShortStoriesPlaylist"
+short_stories_playlist = "https://youtube.com/playlist?list=PL7potaX-C8RiyjCwII9JuHdsh838Q9x-e&si=FWqYijteYrE05P87"
 
 # Games per mood
 games = {
