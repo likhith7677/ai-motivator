@@ -1,0 +1,43 @@
+pipeline {
+    agent any
+
+    environment {
+        DOCKER_IMAGE = 'likhith17/the_mood:latest'
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                // Pull code from GitHub
+                git 'https://github.com/likhith7677/ai-motivator.git'
+            }
+        }
+
+        stage('Build Docker Image') {
+            steps {
+                script {
+                    // Build the Docker image
+                    sh 'docker build -t myai .'
+                }
+            }
+        }
+
+        stage('Push Docker Image') {
+            steps {
+                script {
+                    // Push the Docker image to Docker Hub
+                    sh 'docker push myai'
+                }
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                script {
+                    // Deploy the Docker container
+                    sh 'docker run -d -p 5000:5000 myai'
+                }
+            }
+        }
+    }
+}
